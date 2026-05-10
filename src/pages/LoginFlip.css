@@ -1,0 +1,45 @@
+.card-flip-container {
+    perspective: 1000px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .card-flip-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease-in-out;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .card-flip-inner.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .card-face-back {
+    transform: rotateY(180deg);
+  }
+  
+  /* ✅ Custom shadows */
+  .shadow-custom-white {
+    box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.4), inset 6px 6px 12px rgba(255, 255, 255, 0.7);
+  }
+  
+  .shadow-inner-avatar {
+    box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.4), inset 4px 4px 8px rgba(255, 255, 255, 0.7);
+  }
+  
+  .shadow-inner-card {
+    box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.4), inset 4px 4px 8px rgba(255, 255, 255, 0.7);
+  }
+  
